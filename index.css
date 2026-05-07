@@ -20,3 +20,50 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+/* --- Responsive Styles for Mobile and Tablets --- */
+
+/* Styles for screens up to 768px wide (typical tablets and smaller desktops) */
+@media (max-width: 768px) {
+  .quiz-container {
+    max-width: 90%; /* Allow container to take more width on smaller screens */
+    padding: 20px;  /* Slightly reduce padding */
+    margin: 10px auto; /* Add some margin top/bottom if centering */
+  }
+
+  .option-button {
+    padding: 10px; /* Slightly reduce button padding */
+    font-size: 0.95rem; /* Slightly reduce button font size */
+  }
+
+  .question-text {
+    font-size: 1.2rem; /* Slightly reduce question font size */
+  }
+
+  .gen-badge {
+    font-size: 0.7rem; /* Smaller badge on mobile */
+    padding: 4px 12px;
+  }
+}
+
+/* Styles for screens up to 480px wide (typical mobile phones) */
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 15px; /* Further reduce padding on very small screens */
+    margin: 10px auto;
+  }
+
+  .option-button {
+    padding: 8px; /* Further reduce button padding */
+    font-size: 0.9rem; /* Further reduce button font size */
+  }
+
+  .question-text {
+    font-size: 1.1rem; /* Further reduce question font size */
+  }
+
+  /* If buttons stack vertically on very small screens */
+  .options-grid {
+    grid-template-columns: 1fr; /* Stack buttons vertically */
+  }
+}
