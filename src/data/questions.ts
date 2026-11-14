@@ -69,6 +69,7 @@ export const generateQuiz = (gen: string, count: number = 5): QuizItem[] => {
       level: randomMove.level,
       correct: randomMove.move_name,
       dummy: shuffledDummies,
+      options: [...shuffledDummies, randomMove.move_name].sort(() => Math.random() - 0.5),
       generation: getGenLabel(pokemon.gen)
     });
   }

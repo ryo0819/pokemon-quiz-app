@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import type { QuizItem } from '../types/quiz';
 
 interface QuestionCardProps {
@@ -18,9 +18,8 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   generationName,
   showGeneration
 }) => {
-  const options = useMemo(() => {
-    return [...quizItem.dummy, quizItem.correct].sort(() => Math.random() - 0.5);
-  }, [quizItem]);
+  // 選択肢は問題を作るとき（generateQuiz）にシャッフル済み。描画中に Math.random を呼ばない
+  const options = quizItem.options;
 
   return (
     <div className="question-card">

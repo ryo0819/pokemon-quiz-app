@@ -15,6 +15,7 @@ export interface QuizItem {
   level: number;
   correct: string;
   dummy: string[];
+  options: string[]; // 選択肢（正解とダミーを、問題を作るときに一度だけシャッフルしたもの）
   generation?: string;
 }
 
